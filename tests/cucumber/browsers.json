@@ -1,0 +1,44 @@
+[
+  {
+    "device":null,
+    "browser":"chrome",
+    "os":"OS X",
+    "browser_version":"46.0",
+    "os_version":"El Capitan"
+  },
+  {
+    "device":null,
+    "browser":"ie",
+    "os":"Windows",
+    "browser_version":"10.0",
+    "os_version":"7"
+  },
+  {
+    "device":null,
+    "browser":"ie",
+    "os":"Windows",
+    "browser_version":"11.0",
+    "os_version":"7"
+  },
+  {
+    "device":"iPhone 4S",
+    "browser":"iphone",
+    "os":"ios",
+    "browser_version":null,
+    "os_version":"5.1"
+  },
+  {
+    "device":"iPad 4th",
+    "browser":"ipad",
+    "os":"ios",
+    "browser_version":null,
+    "os_version":"7.0"
+  },
+  {
+    "device":"iPhone 6",
+    "browser":"iphone",
+    "os":"ios",
+    "browser_version":null,
+    "os_version":"8.3"
+  }
+]

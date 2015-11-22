@@ -1,0 +1,32 @@
+require 'rubygems'
+require 'cucumber/rake/task'
+require 'json'
+
+@browsers = JSON.load(open('browsers.json'))
+
+task :cucumber do
+  current_browser = ""
+  begin
+    @browsers.each do |browser|
+        current_browser = browser
+        Rake::Task[:update_env_settings].execute(browser)
+        Rake::Task[:features].execute()
+    end
+  rescue SystemExit, Interrupt
+    puts "User stopped script!"
+    puts "Failed to run tests for #{current_browser.inspect}"
+  end
+end
+
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "--tags @debugging"
+end
+
+task :update_env_settings do |t, browser|
+  ENV['OS'] = browser['os']
+  ENV['OS_VERSION'] = browser['os_version']
+  ENV['BROWSER'] = browser['browser']
+  ENV['BROWSER_VERSION'] = browser['browser_version']
+end
+
+task :default => [:cucumber]
