@@ -15,7 +15,7 @@ before_script:
   - sleep 10
 
 script:
-  - rake
+  - cd tests/cucumber && rake
 
 matrix:
   fast_finish: true
