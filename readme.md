@@ -1,4 +1,4 @@
-# lbac
+# Laravel BrowserStack Automate Cucumber
 
 ### What is this repo?
 
