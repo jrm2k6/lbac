@@ -19,7 +19,7 @@ task :cucumber do
 end
 
 Cucumber::Rake::Task.new(:features) do |t|
-  t.cucumber_opts = "--tags @debugging"
+  t.cucumber_opts = "-v"
 end
 
 task :update_env_settings do |t, browser|
